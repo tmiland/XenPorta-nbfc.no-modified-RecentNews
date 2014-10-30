@@ -1,0 +1,58 @@
+<xen:require css="message_user_info.css" />
+<xen:require css="bb_code.css" />
+<xen:require css="EWRblock_RecentNews.css" />
+
+<div id="recentNews">
+    <xen:foreach loop="$RecentNews" value="$news" i="$i">
+        <div class="recentNews" id="{$news.thread_id}">
+     
+            <xen:if is="{$news.promote_icon} != 'disabled'">
+            <xen:if hascontent="true">
+                <div class="newsImage">
+                    <xen:contentcheck>
+                    <xen:if is="{$news.attach}">
+                        <a href="{xen:link threads, $news}"><img src="{xen:link attachments, $news.attach}" alt="{$news.attach.filename}" /></a>
+                    <xen:elseif is="{$news.image}" />
+                        <a href="{xen:link threads, $news}"><img src="{$news.image}" alt="{$news.image}" /></a>
+                    <xen:else />
+                        <xen:avatar user="$news" size="m" itemprop="photo" />
+                    </xen:if>
+                    </xen:contentcheck>
+                            <div class='newsTitle'><h2><a href="{xen:link threads, $news}" title="{$news.title}">{xen:helper threadPrefix, $news}{$news.title}</a></h2></div>
+                </div>
+            </xen:if>
+            </xen:if>
+         
+         
+            <div class='newsDetails'>
+                <div class='newsAuthor'><i class="fa fa-pencil"></i> <a href="{xen:link members, $news}" class="username">{$news.username}</a></div>
+                <div class='newsDate'><i class="fa fa-clock-o"></i> {$news.day} {$news.month}</div>
+                <div class='newsComments'><i class="fa fa-eye"></i> <a href="{xen:link threads/unread, $news}">{xen:number $news.view_count}</a></div>
+                <div class='Comments'><i class="fa fa-comments-o"></i> <a href="{xen:link threads/unread, $news}">{xen:number $news.reply_count}</a></div>
+                <div class='Likes'><i class="fa fa-thumbs-o-up"></i> {xen:number $news.first_post_likes}</div>
+            </div>
+
+        </div>
+                {xen:if '{$i} % 2 == 0', '<div class="news-divider"></div>'}
+    </xen:foreach>
+</div>
+<script type="text/javascript">
+<!--
+
+$(document).ready(function(){
+
+$(".newsImage").hover(function(){
+  $(this).children(".newsTitle").stop().animate({"background-color": "#5884ab", "text-indent": "20px"}, 500, function(){
+    $(this).css("background-image", "url(/images/arrow-white.png)");
+});
+//  $(this).children(".newsTitle").children("h2").children("a").stop().animate({"color": "#000000"}, 500);
+}, function(){
+$(this).children(".newsTitle").css("background-image", "none");
+  $(this).children(".newsTitle").stop().animate({"background-color": "#000000", "text-indent": "8px"}, 500);
+//  $(this).children(".newsTitle").children("h2").children("a").stop().animate({"color": "#ffffff"}, 500);
+});
+
+});
+
+// -->
+</script>
