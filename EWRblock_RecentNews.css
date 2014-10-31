@@ -1,14 +1,14 @@
-#recentNews                { overflow:hidden; width:100%; }
+#recentNews			{ overflow:hidden; width:100%; }
 
-.recentNews                { float:left; width:48.5%; margin:10px 0 20px 0; clear:both; background: whitesmoke; }
+.recentNews			{ float:left; width:48.5%; margin:10px 0 20px 0; clear:both; background: whitesmoke; border-radius: 6px; }
 .recentNews:nth-child(3n-1)    { float:right !important; clear:none !important; margin-right:2px !important; }
 
 .news-divider { float:left; clear:both; width:100%; height:0px; border-top:solid 1px #c0c0c0; margin:10px 0 20px 0; }
 
-.recentNews .newsImage        { width:100%; min-height:183px; }
-.recentNews .newsImage img        { max-width:100%; border:solid 1px #c1c1c1; }
+.recentNews .newsImage		{ width:100%; min-height:183px; }
+.recentNews .newsImage img		{ max-width:100%; border:solid 1px #c1c1c1; border-radius: 6px; }
 
-.recentNews .newsTitle        {
+.recentNews .newsTitle		{
 overflow:hidden;
 width:100%;
 position: relative;
@@ -22,24 +22,26 @@ text-indent: 8px;
 background-repeat:no-repeat;
 background-position:8px 11px;
 }
-.recentNews .newsTitle h2        {
+.recentNews .newsTitle h2		{
 font-size:16px; width:100%; font-weight:400;
 margin:0; white-space:nowrap; overflow:hidden;
 text-overflow:ellipses;
 height: 30px;
 line-height: 30px;
 }
-.recentNews .newsTitle a        { color:#ffffff; text-decoration:none !important;
+.recentNews .newsTitle a		{ color:#ffffff; text-decoration:none !important;
 width: 98%;
 display: block;
 overflow: hidden;
 text-overflow: ellipsis;
 }
-.recentNews .newsTitle a:hover        { color:#ffffff; text-decoration:none !important; }
 
-.recentNews .newsDetails        { overflow:hidden; width:100%; margin-top:5px; }
-.recentNews .newsAuthor            { float:left; width:auto; font-size:12px; margin-left:10px; }
-.recentNews .newsDate            { float:left; width:auto; font-size:12px; margin-left:15px; }
-.recentNews .Likes        { float:left; width:auto; font-size:12px; margin-left:25px; }
-.recentNews .newsComments        { float:right; width:auto; font-size:12px; margin-right:10px; }
-.recentNews .Comments        { float:right; width:auto; font-size:12px; margin-right:20px; }
+.recentNews .newsText			{ padding: 6px 14px 7px; }
+
+.recentNews .newsTitle a:hover	{ color:#ffffff; text-decoration:none !important; }
+.recentNews .newsDetails		{ overflow:hidden; width:100%; margin-top:5px; }
+.recentNews .newsAuthor			{ float:left; width:auto; font-size:12px; margin-left:10px; }
+.recentNews .newsDate			{ float:left; width:auto; font-size:12px; margin-left:15px; }
+.recentNews .Likes				{ float:left; width:auto; font-size:12px; margin-left:25px; }
+.recentNews .newsComments		{ float:right; width:auto; font-size:12px; margin-right:10px; }
+.recentNews .Comments			{ float:right; width:auto; font-size:12px; margin-right:20px; }

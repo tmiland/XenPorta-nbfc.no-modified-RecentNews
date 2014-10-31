@@ -23,7 +23,7 @@
             </xen:if>
             </xen:if>
          
-         
+			<div class="newsText">{xen:raw $news.messageHtml}</div>
             <div class='newsDetails'>
                 <div class='newsAuthor'><i class="fa fa-pencil"></i> <a href="{xen:link members, $news}" class="username">{$news.username}</a></div>
                 <div class='newsDate'><i class="fa fa-clock-o"></i> {$news.day} {$news.month}</div>
