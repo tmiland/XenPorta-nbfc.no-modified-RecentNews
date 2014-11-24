@@ -1,12 +1,24 @@
-#recentNews			{ overflow:hidden; width:100%; }
+#recentNews			{ 
+overflow:hidden; 
+width:100%; 
+}
 
-.recentNews			{ float:left; width:48.5%; margin:10px 0 20px 0; clear:both; background: whitesmoke; border-radius: 6px; }
+.recentNews			{ 
+float:left; 
+width:48.5%; 
+margin:10px 0 20px 0; 
+clear:both; 
+background: rgba(0,0,0,.1); 
+}
+
 .recentNews:nth-child(3n-1)    { float:right !important; clear:none !important; margin-right:2px !important; }
 
 .news-divider { float:left; clear:both; width:100%; height:0px; border-top:solid 1px #c0c0c0; margin:10px 0 20px 0; }
 
 .recentNews .newsImage		{ width:100%; min-height:183px; }
-.recentNews .newsImage img		{ max-width:100%; border:solid 1px #c1c1c1; border-radius: 6px; }
+.recentNews .newsImage img		{ 
+max-width:100%;
+}
 
 .recentNews .newsTitle		{
 overflow:hidden;

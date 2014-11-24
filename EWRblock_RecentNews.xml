@@ -15,10 +15,10 @@
                     <xen:elseif is="{$news.image}" />
                         <a href="{xen:link threads, $news}"><img src="{$news.image}" alt="{$news.image}" /></a>
                     <xen:else />
-                        <xen:avatar user="$news" size="m" itemprop="photo" />
+						<xen:avatar user="$news" size="m" itemprop="photo" />
                     </xen:if>
                     </xen:contentcheck>
-                            <div class='newsTitle'><h2><a href="{xen:link threads, $news}" title="{$news.title}">{xen:helper threadPrefix, $news}{$news.title}</a></h2></div>
+						<div class='newsTitle'><h2><a href="{xen:link threads, $news}" title="{$news.title}">{xen:helper threadPrefix, $news}{$news.title}</a></h2></div>
                 </div>
             </xen:if>
             </xen:if>
